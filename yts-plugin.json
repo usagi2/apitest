@@ -6,8 +6,8 @@
   "responseFormat": "application/json",
   "responseSchema": "data.movies",
   "displayFields": {
-    "Title": "title",
-    "Date Added": "date_uploaded",
+    "Title": "title[0]",
+    "Date Added": "date_uploaded[0]",
     "Seeds": "torrents[0].seeds",
     "Peers": "torrents[0].peers",
     "Size": "torrents[0].size"
