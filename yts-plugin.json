@@ -1,16 +1,23 @@
 {
-  "baseUrl": "https://yts.mx/api/v2/",
-  "searchEndpoint": "list_movies.json?query_term=",
-  "httpMethod": "GET",
-  "requestFormat": "application/json",
-  "responseFormat": "application/json",
-  "responseSchema": "data.movies",
-  "displayFields": {
-    "Title": "title",
-    "Date Added": "date_uploaded",
-    "Seeds": "torrents[0].seeds",
-    "Peers": "torrents[0].peers",
-    "Size": "torrents[0].size",
-    "Hash": "torrents[0].hash"
-  }
+    "baseUrl": "https://yts.mx/api/v2/",
+    "searchEndpoint": "list_movies.json?query_term=",
+    "httpMethod": "GET",
+    "requestFormat": "application/json",
+    "responseFormat": "application/json",
+    "responseSchema": "data.movies",
+    "displayFields": {
+        "Title": "title",
+        "Date Added": "date_uploaded",
+        "torrents": {
+            "Seeds": "seeds",
+            "Peers": "peers",
+            "Size": "size",
+            "Hash": "hash"
+        }
+    },
+    "nestedObject": {
+        "path": "torrents",
+        "titleKey": "quality"
+    }
 }
+
