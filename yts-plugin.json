@@ -1,7 +1,14 @@
 {
   "baseUrl": "https://yts.mx/api/v2/",
-  "searchEndpoint": "list_movies.json",
+  "searchEndpoint": "list_movies.json?query_term=",
   "httpMethod": "GET",
   "requestFormat": "application/json",
   "responseFormat": "application/json"
+  "displayFields": {
+	"Title": "title",
+	"Date Added": "date_added",
+	"Seeds": "torrents[0].seeds",
+	"Peers": "torrents[0].peers",
+	"Size": "torrents[0].size"
+	}
 }
