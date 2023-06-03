@@ -6,11 +6,10 @@
   "responseFormat": "application/json",
   "responseSchema": "data.movies",
   "displayFields": {
-	"Title": "title",
-	"Date Added": "date_added",
-	"Seeds": "torrents[0].seeds",
-	"Peers": "torrents[0].peers",
-	"Size": "torrents[0].size"
-	}
+    "Title": "title",
+    "Date Added": "date_uploaded",
+    "Seeds": "torrents[0].seeds",
+    "Peers": "torrents[0].peers",
+    "Size": "torrents[0].size"
+  }
 }
-
